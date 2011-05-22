@@ -3,14 +3,19 @@
 
 import random
 
+class individual:
+    def __init__(self, sequence, makespan):
+        self.sequence = sequence
+        self.makespan = makespan
+    def show(self):
+        return (self.sequence, self.makespan)
+
 def create_individual(size):
     sequence = range(0, size)
     random.shuffle(sequence)
-
     return sequence
-    
 
-class population(object):
+class population:
     def __init__(self):
         self.size = size
         

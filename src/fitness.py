@@ -5,7 +5,6 @@ import flowshop
 
 def fitness(sequence, P):
     N, M, data = P.show()
-    makespan = 0
     last_machine = [0] * M
     last_job = [0] * N
     for j in sequence:
@@ -19,5 +18,3 @@ def fitness(sequence, P):
                 last_machine[m] = last_job[j]       
             m = m + 1
     return max(last_machine)
-
-

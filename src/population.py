@@ -5,7 +5,7 @@ import random
 from fitness import fitness
 from flowshop import Problem, read_problem
 from globals_settings import PROBLEM_FILE
-from operator import itemgetter, attrgetter
+from operator import attrgetter
 
 class Individual:
     def __init__(self, sequence, makespan):

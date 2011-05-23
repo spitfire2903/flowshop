@@ -2,24 +2,29 @@
 # -*- coding: utf8 -*-
 
 import random
+from fitness import fitness
+from flowshop import Problem, read_problem
+from globals_settings import PROBLEM_FILE
 
-class individual:
+class Individual:
     def __init__(self, sequence, makespan):
         self.sequence = sequence
         self.makespan = makespan
     def show(self):
         return (self.sequence, self.makespan)
 
-def create_individual(size):
-    sequence = range(0, size)
+#XXX: mover a função para a classe Individual
+def create_individual(Problem):
+    N, M, data = Problem.show()
+    sequence = range(0, N)
     random.shuffle(sequence)
-    return sequence
+    makespan = fitness(sequence, Problem)
+    return (sequence, makespan)
 
-class population:
+class Population:
     def __init__(self):
         self.size = size
         
-
-
 # testes
-print create_individual(10)
+P = read_problem(PROBLEM_FILE)
+print create_individual(P)

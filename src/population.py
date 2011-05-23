@@ -26,14 +26,15 @@ class Population:
     def __init__(self, size):
         self.size = size
         self.population = []
-    def create_population(Problem):
+    def create_population(self, Problem):
         i = 0
         while i < self.size:
-            I = Individual(create_individual(Problem))
+            sequence, makespan = create_individual(Problem)
+            I = Individual(sequence, makespan)
             self.population.append(I)
             i = i + 1
     def get_population(self):
-        return self.population 
+        return self.population
         
 # testes
 P = read_problem(PROBLEM_FILE)

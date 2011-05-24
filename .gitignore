@@ -1,9 +1,10 @@
 src/testes
-*.py[co~]
+*.py[co]
 *.aux
 *.nav
 *.snm
 *.toc
 *.log
 *.out
-
+*~
+ 

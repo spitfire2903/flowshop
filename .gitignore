@@ -1,2 +1,9 @@
 src/testes
 *.py[co~]
+*.aux
+*.nav
+*.snm
+*.toc
+*.log
+*.out
+

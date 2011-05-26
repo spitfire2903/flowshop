@@ -7,4 +7,9 @@ src/testes
 *.log
 *.out
 *~
+*.project
+*.pydevproject
+.settings/
+
+
  
